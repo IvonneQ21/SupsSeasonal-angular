@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'mainsearch',
-  template: './mainsearch.component.html',
+  templateUrl: './mainsearch.component.html',
   styleUrls: ['./mainsearch.component.css']
 })
 export class MainsearchComponent implements OnInit {

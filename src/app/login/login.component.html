@@ -29,18 +29,18 @@
     </div>
     <sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
 </form> -->
-
+        <!-- (ngSubmit)='onSubmit(myForm.value)' -->
 
 <div>
   <h2>Log-In</h2>
-  <form class="ui form">
+  <form [formGroup]="myForm" class="ui form" (ngSubmit)='onSubmit(myForm.value)'>
     <div class="field">
-      <label>E-mail</label>
-      <input type="text" email="email" placeholder="e-mail">
+      <label for='emailInput'>E-mail</label>
+      <input formControlName="email" type="text" name="email" placeholder="e-mail">
     </div>
     <div class="field">
-      <label>Password</label>
-      <input type="text" name="password" placeholder="password">
+      <label for="passwordInput">Password</label>
+      <input formControlName="password" type="text" name="password" placeholder="password">
     </div>
     <button class="ui button" type="submit">Submit</button>
   </form>

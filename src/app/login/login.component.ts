@@ -1,46 +1,48 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-// import { FormGroup } from 'ng2-semantic-ui';
+import {
+  FormBuilder,
+  FormGroup
+} from '@angular/forms';
+import {Http, Response} from '@angular/http';
 
 // import { AlertService, AuthenticationService } from '../_services/index';
 
 @Component({
   selector: 'login',
-  // moduleId: module.id,
   templateUrl: 'login.component.html'
 })
 
 export class LoginComponent implements OnInit {
-    // model: any = {};
-    // loading = false;
-    // returnUrl: string;
-    //
-    constructor(){}
-    //     private route: ActivatedRoute,
-    //     private router: Router,
-    //     private authenticationService: AuthenticationService,
-    //     private alertService: AlertService) { }
-    //
-    ngOnInit() {
-    //     // reset login status
-    //     this.authenticationService.logout();
-    //
-    //     // get return url from route parameters or default to '/'
-    //     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  myForm: FormGroup;
+  loading: boolean;
+  user: Object;
+
+
+    constructor(private http: Http, @Inject(FormBuilder) fb:FormBuilder) {
+        this.myForm = fb.group({
+          email:'',
+          password: ''
+        })
     }
-    //
-    // login() {
-    //     this.loading = true;
-    //     this.authenticationService.login(this.model.username, this.model.password)
-    //         .subscribe(
-    //             data => {
-    //                 this.router.navigate([this.returnUrl]);
-    //             },
-    //             error => {
-    //                 this.alertService.error(error);
-    //                 this.loading = false;
-    //             });
-    // }
+    ngOnInit() {
+
+    }
+
+  onSubmit(value: string): void {
+    // this.loading = true;
+      console.log('thisValue', value);
+    let API_URL = 'http://supseasonal.herokuapp.com/api/login'
+    this.http.post(API_URL, value)
+    .subscribe((res: Response) => {
+    this.user = res.json();
+    console.log(this.user);
+    // this.loading = false;
+    });
+
+    }
+
+
 }
 
 
