@@ -15,7 +15,7 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { MonthsDropdownComponent } from './months-dropdown/months-dropdown.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
-
+import {  MainsearchComponent } from './mainsearch/mainsearch.component'
 
 const routes: Routes =[
   // basic routes
@@ -24,6 +24,7 @@ const routes: Routes =[
   //authentication.
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterFormComponent },
+  { path: 'mainsearch', component: MainsearchComponent },
   // { path: 'ingredients', component: RegisterFormComponent },
   // {
   //   path: protected,
@@ -42,7 +43,9 @@ const routes: Routes =[
     IngredientsComponent,
     MonthsDropdownComponent,
     LoginComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    MainsearchComponent
+
     // ProtectedComponent
   ],
   imports: [
