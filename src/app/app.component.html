@@ -2,9 +2,13 @@
   <div class="container" text-align="center">
     <h1 text-align="center">SupSeasonal</h1>
     <div class="navLinks">
-      <!-- <li>Home</li>
-      <li>Registration</li>
-      <li>Search for Month Ingredients</li> -->
+
+      <!--Router sample here  -->
+      <div><h1>Let's try routes</h1></div>
+      <a [routerLink]="['/home']">Home</a>
+      <a [routerLink]="['/login']">LogIn</a>
+      <a [routerLink]="['/register']">Register</a>
+
       <!-- <a [routerLink]="['/home']">Home</a>
       <a [routerLink]="['/login']">logIn</a> -->
       <!-- <a [routerLink]="['/search']">Search</a> -->
@@ -15,7 +19,7 @@
 
 <div id="content">
   <div class="container">
-    <!-- <router-outlet></router-outlet> -->
+    <router-outlet></router-outlet>
     <app-home></app-home>
 
     <months-dropdown></months-dropdown>
