@@ -9,7 +9,7 @@ import {Http, Response} from '@angular/http';
 // import { AlertService, AuthenticationService } from '../_services/index';
 
 @Component({
-  selector: 'login',
+  selector: 'app-login',
   templateUrl: 'login.component.html'
 })
 
@@ -18,31 +18,25 @@ export class LoginComponent implements OnInit {
   loading: boolean;
   user: Object;
 
+  constructor(private http: Http, @Inject(FormBuilder) fb: FormBuilder) {
+    this.myForm = fb.group({
+      email: '',
+      password: ''
+    });
+  }
+  ngOnInit() {
 
-    constructor(private http: Http, @Inject(FormBuilder) fb:FormBuilder) {
-        this.myForm = fb.group({
-          email:'',
-          password: ''
-        })
-    }
-    ngOnInit() {
-
-    }
+  }
 
   onSubmit(value: string): void {
-    // this.loading = true;
-      console.log('thisValue', value);
-    let API_URL = 'http://supseasonal.herokuapp.com/api/login'
+    console.log('thisValue', value);
+    const API_URL = 'http://supseasonal.herokuapp.com/api/login';
     this.http.post(API_URL, value)
     .subscribe((res: Response) => {
-    this.user = res.json();
-    console.log(this.user);
-    // this.loading = false;
+      this.user = res.json();
+      console.log(this.user);
     });
-
-    }
-
-
+  }
 }
 
 

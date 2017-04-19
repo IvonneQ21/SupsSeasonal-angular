@@ -9,10 +9,9 @@ export class IngredientsComponent implements OnInit {
   ingredients: string[];
 
   constructor() {
-      this.ingredients = ['arugula', 'beets', 'broccoli', 'brussels sprouts'];
-   }
+    this.ingredients = ['arugula', 'beets', 'broccoli', 'brussels sprouts'];
+  }
 
   ngOnInit() {
   }
-
 }

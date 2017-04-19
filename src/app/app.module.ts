@@ -14,13 +14,14 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { MonthsDropdownComponent } from './months-dropdown/months-dropdown.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
-import {  MainsearchComponent } from './mainsearch/mainsearch.component'
+import {  MainsearchComponent } from './mainsearch/mainsearch.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
-const routes: Routes =[
+const routes: Routes = [
   // basic routes
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
-  //authentication.
+  // authentication.
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterFormComponent },
   { path: 'mainsearch', component: MainsearchComponent },
@@ -36,7 +37,8 @@ const routes: Routes =[
     MonthsDropdownComponent,
     LoginComponent,
     RegisterFormComponent,
-    MainsearchComponent
+    MainsearchComponent,
+    SearchResultsComponent
 
     // ProtectedComponent
   ],
