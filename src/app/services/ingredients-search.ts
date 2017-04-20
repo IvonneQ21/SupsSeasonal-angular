@@ -13,7 +13,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class IngredientSearchService {
-  // results : Results[];
+  results : {};
   // currentMonth: string;
   // static instance: IngredientSearchService;
 
@@ -21,9 +21,9 @@ export class IngredientSearchService {
   // ingredients: Array<SearchResult>;
 
 
-  // constructor (private http: Http) {
-  //   return IngredientSearchService.instance = IngredientSearchService.instance || this;
-  // }
+  constructor (private http: Http) {
+    // return IngredientSearchService.instance = IngredientSearchService.instance || this;
+  }
   setMonth = (queryMonth) => {
     // console.log("the month is being set");
     // this.currentSelectedMonth = queryMonth.month;
@@ -31,7 +31,7 @@ export class IngredientSearchService {
     return this.http.get(url)
       .toPromise()
       .then(result => result.json())
-      .then(this.results =res)
+      .then(res => this.results = res)
 
 
   }
