@@ -15,7 +15,7 @@ export class IngredientSearchService {
   }
 
   setMonth(queryMonth: string): Promise<SearchResult[]> {
-    const url = `http://supseasonal.herokuapp.com/api/months/${queryMonth}`;
+    const url = `https://supseasonal.herokuapp.com/api/months/${queryMonth}`;
     return this.http.get(url)
       .toPromise()
       .then(result => result.json())
