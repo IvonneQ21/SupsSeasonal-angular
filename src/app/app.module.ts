@@ -16,22 +16,19 @@ import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { MainsearchComponent } from './mainsearch/mainsearch.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
-// import { IngredientsSearchBoxComponent } from './ingredients-search-box/ingredients-search-box.component';
 import { IngredientSearchService } from './services/ingredients-search';
 import { Injectables } from './services/ingredientsSearch.injectables';
 import { TalkapiComponent } from './talkapi/talkapi.component';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 const routes: Routes = [
   // basic routes
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
-  // authentication.
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterFormComponent },
   { path: 'mainsearch', component: MainsearchComponent },
+  { path: 'talkapi', component: TalkapiComponent },
 ];
-
-
 
 @NgModule({
   declarations: [
@@ -43,10 +40,7 @@ const routes: Routes = [
     RegisterFormComponent,
     MainsearchComponent,
     SearchResultsComponent,
-    TalkapiComponent,
-    // IngredientsSearchBoxComponent
-
-    // ProtectedComponent
+    TalkapiComponent
   ],
   imports: [
     BrowserModule,
@@ -56,17 +50,8 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule
-    // NgbModule.forRoot()
   ],
-  // providers: [
-  //   // {provide: LocationStrategy, useClass : HashLocationStrategy },
-  //   // {provide: APP_BASE_HREF, useValue: '/'}
-  // ],
   providers: [IngredientSearchService],
   bootstrap: [AppComponent]
 })
-
-
-
-// ]
 export class AppModule { }
