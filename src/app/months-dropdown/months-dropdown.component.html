@@ -1,23 +1,35 @@
 
-<div class="ui segment">
+<!-- <div class="ui segment">
   <div class="eight wide column">
   <div class="ui search selection dropdown" suiDropdown [(isOpen)]="isOpen" [isDisabled]="isDisabled">
     <div class="text">Select A Month</div>
       <i class="dropdown icon"></i>
-      <div class="menu" suiDropdownMenu>
-      <div class="item" data-value="jan">January</div>
-      <div class="item" data-value="feb">February</div>
-      <div class="item" data-value="mar">March</div>
-      <div class="item" data-value="apr">April</div>
-      <div class="item" data-value="may">May</div>
-      <div class="item" data-value="jun">June</div>
-      <div class="item" data-value="jul">July</div>
-      <div class="item" data-value="aug">August</div>
-      <div class="item" data-value="sep">September</div>
-      <div class="item" data-value="ocy">October</div>
-      <div class="item" data-value="nov">November</div>
-      <div class="item" data-value="dec">December</div>
+      <div (click)="getIngredients()" class="menu" suiDropdownMenu>
+      <div (click)="getIngredients()" class="item" value="jan">January</div>
+      <div (click)="getIngredients()" class="item" value="feb">February</div>
+      <div (click)="getIngredients()" class="item" value="mar">March</div>
+      <div (click)="getIngredients()" class="item" value="apr">April</div>
+      <div (click)="getIngredients()" class="item" value="may">May</div>
+      <div (click)="getIngredients()" class="item" value="jun">June</div>
+      <div (click)="getIngredients()" class="item" value="jul">July</div>
+      <div (click)="getIngredients()" class="item" value="aug">August</div>
+      <div (click)="getIngredients()" class="item" value="sep">September</div>
+      <div (click)="getIngredients()" class="item" value="ocy">October</div>
+      <div (click)="getIngredients()" class="item" value="nov">November</div>
+      <div (click)="getIngredients()" class="item" value="dec">December</div>
     </div>
   </div>
   </div>
+</div> -->
+
+
+<div>
+  <form #f="ngForm"
+        (ngSubmit)="onSubmit(f.value)">
+        <label for="monthSelector">Select A Month</label>
+        <select id="monthSelector" class="" name="queryMonth" ngModel>Select A Month
+          <option *ngFor="let month of months">{{month}}</option>
+        </select>
+        <button type="submit" class="ui button">Submit</button>
+  </form>
 </div>

@@ -1,8 +1,38 @@
 
-<div>
+<!-- <div>
 <ul>
   <li *ngFor='let ingredient of ingredients'>
-    {{ ingredient }}
+    {{ ingredient.food_name }}
   </li>
 </ul>
+<button (click)="renderNewIngredients()">Return Ingredients </button>
+</div> -->
+
+<!-- <div>
+  <p>Ingredients will live here</p>
+  <ul>
+    <li *ngFor="let ingredient of ingredients">
+      {{ingredient.food_name}}
+    </li>
+  </ul>
+  <button (click)="renderNewIngredients()">GIMME THEM INGREDIENTS</button>
+  <div> -->
+
+<!-- <div>
+  <p>Ingredients will live here</p>
+  <ul>
+    <li *ngFor="let ingredient of ingredients">{{ingredient.food_name}}</li>
+  </ul>
+  <button (click)="renderNewIngredients()">GIMME THEM INGREDIENTS</button>
+</div> -->
+
+<div>
+  <h3>SupSeasonal Angular Edition!</h3>
+  <!-- <a [routerLink]="['/months-dropdown']" class="btn btn-link">Month Selector</a> -->
+  <!-- <a [routerLink]="['/recipes']" class="btn btn-link">Recipes Results</a> -->
+  <p>Ingredients live here</p>
+  <button (click)="renderNewIngredients()">Show me the freshest ingredients for the current month selected!</button>
+  <ul>
+    <li *ngFor="let ingredient of ingredients">{{ingredient.food_name}}</li>
+  </ul>
 </div>

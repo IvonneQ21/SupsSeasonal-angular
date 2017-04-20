@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchResult } from '../imgredientresult.model';
+import { IngredientSearchService } from '../services/ingredients-search';
 
 @Component({
   selector: 'app-ingredients',
@@ -6,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ingredients.component.css']
 })
 export class IngredientsComponent implements OnInit {
-  ingredients: string[];
 
-  constructor() {
-    this.ingredients = ['arugula', 'beets', 'broccoli', 'brussels sprouts'];
-  }
+  constructor(){}
 
-  ngOnInit() {
-  }
+  // ingredients: SearchResult[];
+  //
+  // constructor(private ingredientSearch: IngredientSearchService) { }
+  ngOnInit() {}
+  //
+  // updateList(results: SearchResult[]): void {
+  //   this.ingredients = results;
+  // }
+  //
+  // getIngredients() {
+  //   return this.ingredientSearch.getIngredients();
+  // }
+  //
+  // renderNewIngredients() {
+  //   return this.updateList(this.getIngredients());
+  // }
 }

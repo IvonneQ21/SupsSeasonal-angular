@@ -14,9 +14,13 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { MonthsDropdownComponent } from './months-dropdown/months-dropdown.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
-import {  MainsearchComponent } from './mainsearch/mainsearch.component';
+import { MainsearchComponent } from './mainsearch/mainsearch.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
-
+// import { IngredientsSearchBoxComponent } from './ingredients-search-box/ingredients-search-box.component';
+import { IngredientSearchService } from './services/ingredients-search';
+import { Injectables } from './services/ingredientsSearch.injectables';
+import { TalkapiComponent } from './talkapi/talkapi.component';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 const routes: Routes = [
   // basic routes
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -38,7 +42,9 @@ const routes: Routes = [
     LoginComponent,
     RegisterFormComponent,
     MainsearchComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    TalkapiComponent,
+    // IngredientsSearchBoxComponent
 
     // ProtectedComponent
   ],
@@ -50,11 +56,13 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule
+    // NgbModule.forRoot()
   ],
   // providers: [
   //   // {provide: LocationStrategy, useClass : HashLocationStrategy },
   //   // {provide: APP_BASE_HREF, useValue: '/'}
   // ],
+  providers: [Injectables],
   bootstrap: [AppComponent]
 })
 
