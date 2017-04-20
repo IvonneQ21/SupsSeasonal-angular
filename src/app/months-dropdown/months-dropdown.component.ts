@@ -11,6 +11,8 @@ import { IngredientSearchService } from '../services/ingredients-search';
 })
 export class MonthsDropdownComponent implements OnInit {
   months: string[];
+  isOpen: string;
+  isDisabled: string;
 
   constructor(private ingredientSearchService: IngredientSearchService) { }
 

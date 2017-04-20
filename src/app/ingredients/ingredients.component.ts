@@ -9,7 +9,7 @@ import { IngredientSearchService } from '../services/ingredients-search';
 })
 
 export class IngredientsComponent implements OnInit {
-  constructor(private ingredientSearchService: IngredientSearchService) {}
+  constructor(public ingredientSearchService: IngredientSearchService) {}
 
   ngOnInit() {}
 }

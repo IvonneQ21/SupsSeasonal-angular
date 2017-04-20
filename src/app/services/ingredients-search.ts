@@ -11,7 +11,7 @@ import 'rxjs/add/operator/toPromise';
 export class IngredientSearchService {
   results: SearchResult[];
 
-  constructor (private http: Http) {
+  constructor (public http: Http) {
   }
 
   setMonth(queryMonth: string): Promise<SearchResult[]> {

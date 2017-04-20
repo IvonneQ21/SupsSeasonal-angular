@@ -8,7 +8,7 @@ import { Http, Response } from '@angular/http';
 export class TalkapiComponent implements OnInit {
   data: Object;
   loading: boolean;
-  constructor(private http: Http) { }
+  constructor(public http: Http) { }
 
   ngOnInit() {
   }

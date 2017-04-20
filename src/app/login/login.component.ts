@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   loading: boolean;
   user: Object;
 
-  constructor(private http: Http, @Inject(FormBuilder) fb: FormBuilder) {
+  constructor(public http: Http, @Inject(FormBuilder) fb: FormBuilder) {
     this.myForm = fb.group({
       email: '',
       password: ''
