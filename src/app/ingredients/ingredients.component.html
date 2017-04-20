@@ -1,8 +1,6 @@
 
-<div>
+<div id="list" class="ui list">
 <ul>
-  <li *ngFor='let ingredient of ingredients'>
-    {{ ingredient }}
-  </li>
+  <li class="item" *ngFor="let foobar of this.ingredientSearchService.results">{{foobar.food_name}}</li>
 </ul>
-</div>
+<div>

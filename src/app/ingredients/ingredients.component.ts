@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchResult } from '../imgredientresult.model';
+import { IngredientSearchService } from '../services/ingredients-search';
 
 @Component({
   selector: 'app-ingredients',
   templateUrl: './ingredients.component.html',
-  styleUrls: ['./ingredients.component.css']
+  styleUrls: ['./ingredients.component.css'],
 })
+
 export class IngredientsComponent implements OnInit {
-  ingredients: string[];
+  constructor(private ingredientSearchService: IngredientSearchService) {}
 
-  constructor() {
-    this.ingredients = ['arugula', 'beets', 'broccoli', 'brussels sprouts'];
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

@@ -11,5 +11,4 @@ export class MainsearchComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

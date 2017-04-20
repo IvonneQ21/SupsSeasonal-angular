@@ -14,20 +14,20 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { MonthsDropdownComponent } from './months-dropdown/months-dropdown.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
-import {  MainsearchComponent } from './mainsearch/mainsearch.component';
-import { SearchResultsComponent } from './search-results/search-results.component';
+import { MainsearchComponent } from './mainsearch/mainsearch.component';
+import { IngredientSearchService } from './services/ingredients-search';
+import { Injectables } from './services/ingredientsSearch.injectables';
+import { TalkapiComponent } from './talkapi/talkapi.component';
 
 const routes: Routes = [
   // basic routes
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
-  // authentication.
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterFormComponent },
   { path: 'mainsearch', component: MainsearchComponent },
+  { path: 'talkapi', component: TalkapiComponent },
 ];
-
-
 
 @NgModule({
   declarations: [
@@ -38,9 +38,7 @@ const routes: Routes = [
     LoginComponent,
     RegisterFormComponent,
     MainsearchComponent,
-    SearchResultsComponent
-
-    // ProtectedComponent
+    TalkapiComponent
   ],
   imports: [
     BrowserModule,
@@ -51,14 +49,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule
   ],
-  // providers: [
-  //   // {provide: LocationStrategy, useClass : HashLocationStrategy },
-  //   // {provide: APP_BASE_HREF, useValue: '/'}
-  // ],
+  providers: [IngredientSearchService],
   bootstrap: [AppComponent]
 })
-
-
-
-// ]
 export class AppModule { }
