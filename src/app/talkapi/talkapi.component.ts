@@ -14,7 +14,7 @@ export class TalkapiComponent implements OnInit {
   }
   makeRequest(): void {
     this.loading = true;
-    this.http.request('http://supseasonal.herokuapp.com/api/foods')
+    this.http.request('https://supseasonal.herokuapp.com/api/foods')
     .subscribe((res: Response) => {
       this.data = res.json();
       this.loading = false;

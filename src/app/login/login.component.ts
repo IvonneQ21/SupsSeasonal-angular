@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(value: string): void {
     console.log('thisValue', value);
-    const API_URL = 'http://supseasonal.herokuapp.com/api/login';
+    const API_URL = 'https://supseasonal.herokuapp.com/api/login';
     this.http.post(API_URL, value)
     .subscribe((res: Response) => {
       this.user = res.json();
