@@ -15,7 +15,6 @@ import { MonthsDropdownComponent } from './months-dropdown/months-dropdown.compo
 import { LoginComponent } from './login/login.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { MainsearchComponent } from './mainsearch/mainsearch.component';
-import { SearchResultsComponent } from './search-results/search-results.component';
 import { IngredientSearchService } from './services/ingredients-search';
 import { Injectables } from './services/ingredientsSearch.injectables';
 import { TalkapiComponent } from './talkapi/talkapi.component';
@@ -39,7 +38,6 @@ const routes: Routes = [
     LoginComponent,
     RegisterFormComponent,
     MainsearchComponent,
-    SearchResultsComponent,
     TalkapiComponent
   ],
   imports: [

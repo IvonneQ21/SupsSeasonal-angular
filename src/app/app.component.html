@@ -1,24 +1,24 @@
 <div class="page-header">
   <div class="container" text-align="center">
-    <h1 text-align="center">SupSeasonal</h1>
+    <h1 align="center">SupSeasonal</h1>
     <div class="navLinks">
 
-      <!--Router sample here  -->
-      <div><h1>Let's try routes</h1></div>
-      <a [routerLink]="['/home']">Home</a>
-      <a [routerLink]="['/login']">LogIn</a>
-      <a [routerLink]="['/register']">Register</a>
-      <a [routerLink]="['/mainsearch']">Search Ingredients</a>
-      <a [routerLink]="['/talkapi']">HTTP-Example</a>
+
+
+    <div class="ui five item menu">
+      <a class="item" [routerLink]="['/home']">Home</a>
+      <a class="item" [routerLink]="['/login']">LogIn</a>
+      <a class="item" [routerLink]="['/register']">Register</a>
+      <a class="item" [routerLink]="['/mainsearch']">Search Ingredients</a>
+      <a class="item" [routerLink]="['/talkapi']">HTTP-Example</a>
     </div>
   </div>
+</div>
 </div>
 
 
 <div id="content">
   <div class="container">
     <router-outlet></router-outlet>
-    <!-- <app-talkapi></app-talkapi> -->
-    <app-ingredients></app-ingredients>
   </div>
 </div>
