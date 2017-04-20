@@ -1,9 +1,9 @@
 export class SearchResult {
   food_name: string;
 
-  constructor(obj?: any) {
-    this.food_name = obj && obj.food_name || null;
-  }
+  // constructor(obj?: any) {
+  //   this.food_name = obj && obj.food_name || null;
+  // }
 }
 
 // export class foodResult {

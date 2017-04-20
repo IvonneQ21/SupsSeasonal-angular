@@ -8,7 +8,7 @@ import { MonthsDropdownComponent } from '../months-dropdown/months-dropdown.comp
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
-  @Input() result: SearchResult[];
+  // @Input() result: SearchResult[];
 
   constructor() { }
 

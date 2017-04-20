@@ -9,13 +9,16 @@ import { IngredientSearchService } from '../services/ingredients-search';
 })
 export class IngredientsComponent implements OnInit {
 
-  constructor(){}
+  constructor(private ingredientSearchService: IngredientSearchService) {}
 
-  // ingredients: SearchResult[];
-  //
-  // constructor(private ingredientSearch: IngredientSearchService) { }
   ngOnInit() {}
-  //
+
+
+
+
+
+
+
   // updateList(results: SearchResult[]): void {
   //   this.ingredients = results;
   // }

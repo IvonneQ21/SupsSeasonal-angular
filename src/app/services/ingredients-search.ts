@@ -4,8 +4,7 @@ import {
 } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { SearchResult } from '../imgredientresult.model';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
+
 import 'rxjs/add/operator/toPromise';
 
 
@@ -13,7 +12,8 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class IngredientSearchService {
-  results : {};
+  results: SearchResult[];
+
   // currentMonth: string;
   // static instance: IngredientSearchService;
 
@@ -24,7 +24,8 @@ export class IngredientSearchService {
   constructor (private http: Http) {
     // return IngredientSearchService.instance = IngredientSearchService.instance || this;
   }
-  setMonth = (queryMonth) => {
+  setMonth(queryMonth: string): Promise<SearchResult[]> {
+    // console.log('hi')
     // console.log("the month is being set");
     // this.currentSelectedMonth = queryMonth.month;
     const url = `http://supseasonal.herokuapp.com/api/months/${queryMonth}`
@@ -33,7 +34,7 @@ export class IngredientSearchService {
       .then(result => result.json())
       .then(res => this.results = res)
 
-
+      // .then(res => console.log(res))
   }
 }
   // getMonth() {

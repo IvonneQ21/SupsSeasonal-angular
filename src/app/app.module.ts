@@ -62,7 +62,7 @@ const routes: Routes = [
   //   // {provide: LocationStrategy, useClass : HashLocationStrategy },
   //   // {provide: APP_BASE_HREF, useValue: '/'}
   // ],
-  providers: [Injectables],
+  providers: [IngredientSearchService],
   bootstrap: [AppComponent]
 })
 
