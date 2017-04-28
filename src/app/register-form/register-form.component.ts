@@ -26,6 +26,7 @@ export class RegisterFormComponent implements OnInit {
   }
 
   onSubmit(value: string): void {
+    // should move this into services and use an injectable for this.
     const API_URL = 'http://supseasonal.herokuapp.com/api/login';
     this.http.post(API_URL, value)
     .subscribe((res: Response) => {
