@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchResult } from '../imgredientresult.model';
+import { SearchResult } from '../ingredientresult.model';
 import { IngredientSearchService } from '../services/ingredients-search';
 
 @Component({

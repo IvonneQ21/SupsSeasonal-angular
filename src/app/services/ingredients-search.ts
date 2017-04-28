@@ -3,7 +3,7 @@ import {
   Inject
 } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { SearchResult } from '../imgredientresult.model';
+import { SearchResult } from '../ingredientresult.model';
 
 import 'rxjs/add/operator/toPromise';
 
